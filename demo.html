@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Video · Electrolab</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="demo.css"></head>
+<body><header><a class="brand" href="index.html"><span class="brandmark">Φ</span>Electrolab</a><nav><a href="index.html">Simulador</a><a href="manual.html">Manual</a></nav></header>
+<main><div class="intro"><div><span class="eyebrow">RECORRIDO POR LAS CUATRO UNIDADES</span><h1>El laboratorio, en movimiento.</h1><p>24 capítulos · escenas del simulador actual · explicaciones en pantalla · sin locución.</p></div></div>
+<section class="video-card"><h2>Ver el video completo</h2><video id="playback" controls preload="metadata" poster="video/portada.png" src="video/electrolab_funcionamiento_completo.mp4" aria-label="Video de funcionamiento de Electrolab"></video>
+<p id="playback-note">Pulsa reproducir para ver el video MP4. Puedes descargarlo para tu exposición.</p>
+<a id="download" class="video-link" href="video/electrolab_funcionamiento_completo.mp4" download>Descargar video completo</a>
+<details class="chapters"><summary>Ir a un capítulo</summary><ol id="chapters"></ol></details></section>
+<details class="video-card"><summary>Crear una nueva grabación</summary><p>Graba las escenas actuales con sus cálculos y animaciones. La grabación completa dura 6 minutos y 24 segundos. Mantén esta pestaña visible.</p>
+<div class="record-actions"><label for="length">Recorrido<select id="length"><option value="16">Completo · 6:24</option><option value="1">Prueba rápida · 24 segundos</option></select></label><button id="record" class="primary">Crear video</button><button id="stop" hidden>Terminar grabación</button></div>
+<p id="status" class="callout" role="status" aria-live="polite">El video de arriba se reproduce directamente. Para crear otro, abre esta página desde un servidor local HTTP.</p>
+<progress id="progress" max="384" value="0" aria-label="Avance de grabación"></progress>
+<canvas id="video" width="1280" height="720" aria-label="Vista previa de la grabación"></canvas></details>
+<iframe id="lab" title="Sesión independiente del laboratorio para grabación" tabindex="-1" aria-hidden="true"></iframe>
+</main><script src="demo.js"></script></body></html>

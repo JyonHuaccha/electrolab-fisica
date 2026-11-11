@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Laboratorio tridimensional de electricidad y magnetismo. Experimenta con campos, energía, capacitores y circuitos editables.">
+<title>Electrolab · Laboratorio de física</title>
+<link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="lab.css"><link rel="stylesheet" href="studio.css">
+</head>
+<body class="lab">
+<header class="lab-top">
+<a class="brand" href="index.html"><span class="brandmark" aria-hidden="true">Φ</span><span>Electrolab<span class="brand-sub">ELECTRICIDAD Y MAGNETISMO</span></span></a>
+<span class="render-indicator"><i></i><span id="render-status">Laboratorio 3D</span></span>
+<nav aria-label="Material del proyecto"><a href="manual.html">Manual</a><a href="informe.html">Informe</a><a href="presentacion.html">Presentación</a><a href="demo.html">Video</a></nav>
+</header>
+<main>
+<aside class="unit-rail" aria-label="Navegación del laboratorio">
+<p class="rail-caption">EXPERIMENTOS</p>
+<div class="tabs" role="tablist" aria-label="Unidades" aria-orientation="vertical">
+<button role="tab" aria-selected="true" data-unit="1"><b aria-hidden="true">±</b> Campo eléctrico <span>Cargas y potencial</span></button>
+<button role="tab" aria-selected="false" data-unit="2"><b aria-hidden="true">⊣⊢</b> Capacitancia <span>Almacenar energía</span></button>
+<button role="tab" aria-selected="false" data-unit="3"><b aria-hidden="true">Ω</b> Circuitos <span>Construir y medir</span></button>
+<button role="tab" aria-selected="false" data-unit="4"><b aria-hidden="true">Φ</b> Magnetismo <span>Campos y movimiento</span></button>
+</div>
+<div id="rail-experiments" class="rail-experiments"></div>
+<div class="rail-footer"><span>Física · Unidades 1 a 4</span><p>Modifica una condición.<br>Observa su efecto.</p></div>
+</aside>
+<div class="intro"><div><div id="unit-caption" class="eyebrow">UNIDAD 1 · ELECTROSTÁTICA</div><h1 id="unit-heading">Explora lo invisible.</h1></div><div class="intro-actions"><button id="capture-scene" class="secondary" title="Guardar imagen de la escena">Guardar imagen</button><button id="export" class="secondary">↓ Datos CSV</button></div></div>
+<div class="mobile-scenario"><label for="mobile-scenario">Experimento</label><select id="mobile-scenario"></select></div>
+<section id="circuit-studio" hidden aria-label="Editor de circuitos"></section>
+<div class="workspace">
+<aside id="controls" aria-label="Controles del experimento"></aside>
+<section class="experiment">
+<div class="stage-head"><div><span id="tag" class="tag">ESPACIO TRIDIMENSIONAL</span><h2 id="scene-title">Cargas, campo y potencial</h2></div><div class="view-buttons"><button id="view3d" class="active" aria-pressed="true">3D</button><button id="view2d" aria-pressed="false">2D</button><button id="resetview" aria-label="Restablecer cámara">↺ Vista</button></div></div>
+<div class="energy-actions" id="cap-switcher" role="group" aria-label="Conexión del capacitor" hidden></div>
+<div class="canvas-wrap">
+<canvas id="scene" aria-label="Visualización interactiva del experimento"></canvas><div id="webgl-host"></div>
+<div class="scene-corner"><span class="scene-live"><i></i>SIMULACIÓN INTERACTIVA</span><span id="scene-quantity"></span></div>
+<div class="legend" id="legend"></div><div class="stage-hint" id="hint">Arrastra para girar · Rueda para acercar</div>
+<div class="scene-actions"><button id="camera-orbit" aria-pressed="false" title="Giro automático de la cámara">Orbitar</button><button id="scene-expand" aria-pressed="false" title="Ampliar el espacio del experimento">Ampliar</button></div>
+</div>
+<div class="live-strip"><span id="live-description">Edita las fuentes para comparar el campo.</span><span id="live-clock">E y V en unidades SI</span></div>
+<div id="metrics" class="metrics" aria-live="off"></div>
+<section id="energy-panel" class="energy-panel" aria-label="Energía del experimento" hidden></section>
+<div id="aux-readout" class="aux-readout" hidden></div>
+<div class="insight"><span>OBSERVA</span><p id="observation"></p></div>
+</section>
+</div>
+<section class="theory"><div><span class="eyebrow">EL MODELO FÍSICO</span><h2 id="theory-title"></h2><p id="theory-text"></p></div><div id="equations" class="equations"></div></section>
+<footer><span>Producto final de Física · Unidades 1 a 4</span><span>Modelos ideales · Sistema Internacional</span></footer>
+</main>
+<script src="physics.js"></script><script src="lab-controls.js"></script><script src="capacitor-live.js"></script><script src="magnetism.js"></script><script src="field-motion.js"></script><script src="circuit-model.js"></script><script src="circuit-board.js"></script><script src="circuit-flow.js"></script><script src="circuit-studio.js"></script><script src="lab-scene.js"></script><script src="experience.js"></script><script src="app.js"></script><script src="tour.js"></script>
+</body></html>
